@@ -16,17 +16,25 @@ type Order struct {
 
 func main() {
 	// Utile, car on ne sait pas à l'avance le nombre de commandes
+	//orders := []Order{
+	//	{Pending, 120.50},
+	//	{Shipped, 75.99},
+	//	{Delivered, 300.00},
+	//	{Pending, 50.00},
+	//	{Cancelled, 20.00},
+	//	{Delivered, 180.25},
+	//	{Pending, 90.10},
+	//}
+
 	// Utilisation de make si on veut optimiser l'ajout de commande dans le slice
-	//orders := make([]Order, 0, 100)
-	orders := []Order{
-		{Pending, 120.50},
-		{Shipped, 75.99},
-		{Delivered, 300.00},
-		{Pending, 50.00},
-		{Cancelled, 20.00},
-		{Delivered, 180.25},
-		{Pending, 90.10},
-	}
+	orders := make([]Order, 0, 10)
+	orders = append(orders, Order{Pending, 120.50})
+	orders = append(orders, Order{Shipped, 75.99})
+	orders = append(orders, Order{Delivered, 300.00})
+	orders = append(orders, Order{Pending, 50.00})
+	orders = append(orders, Order{Cancelled, 20.00})
+	orders = append(orders, Order{Delivered, 180.25})
+	orders = append(orders, Order{Pending, 90.10})
 
 	var totalPending float64
 	var totalShipped float64
