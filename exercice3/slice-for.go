@@ -16,6 +16,8 @@ type Order struct {
 
 func main() {
 	// Utile, car on ne sait pas à l'avance le nombre de commandes
+	// Utilisation de make si on veut optimiser l'ajout de commande dans le slice
+	//orders := make([]Order, 0, 100)
 	orders := []Order{
 		{Pending, 120.50},
 		{Shipped, 75.99},
