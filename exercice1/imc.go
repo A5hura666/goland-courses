@@ -10,7 +10,7 @@ func main() {
 	const IMCNormal float64 = 25.0
 	const IMCSurpoids float64 = 30.0
 
-	var IMC = poids / (taille * taille)
+	IMC := poids / (taille * taille)
 
 	fmt.Printf("Votre IMC est : %.2f\n", IMC)
 
